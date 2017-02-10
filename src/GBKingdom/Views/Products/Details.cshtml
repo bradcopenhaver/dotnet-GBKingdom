@@ -24,7 +24,7 @@ else
             <p>@Html.DisplayFor(rev => review.Stars) of 5 stars review by @Html.DisplayFor(rev => review.Author)</p>
             <p>@review.Body</p>
             <div class="adminOnly">
-                <p>@Html.ActionLink("Edit this Review", "Edit", "Reviews", new { id = Model.ProductId }) | @Html.ActionLink("Delete this Review", "Delete", "Reviews", new { id = Model.ProductId })</p>
+                <p>@Html.ActionLink("Edit this Review", "Edit", "Reviews", new { id = review.ReviewId }) | @Html.ActionLink("Delete this Review", "Delete", "Reviews", new { id = review.ReviewId })</p>
             </div>
         </div>
     }
