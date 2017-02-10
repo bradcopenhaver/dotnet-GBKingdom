@@ -1,0 +1,27 @@
+﻿@model GBKingdom.Models.Review
+
+@{
+    ViewData["Title"] = "Write a Review";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Write a review for: @ViewBag.product.Name</h1>
+@using (Html.BeginForm())
+{
+    <input type="hidden" value="@ViewBag.product.ProductId" asp-for="ProductId" />
+
+    <div class="form-group">
+        <label asp-for="Author">Author's name:</label>
+        <input class="form-control" asp-for="Author">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Stars">How many stars? (1 star is worst. 5 stars is best.)</label>
+        <input class="form-control" type="number" asp-for="Stars" max="5">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Body">Review:</label>
+        <textarea class="form-control" asp-for="Body"></textarea>
+    </div>
+    <input type="submit" value="Create" class="btn btn-info" />
+}
