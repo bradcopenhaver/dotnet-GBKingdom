@@ -14,11 +14,22 @@ namespace GBKingdom.Models
 {
     public class GBKingdomContext : DbContext
     {
-        
+        public GBKingdomContext() { }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Review> Reviews { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=GBKingdom;integrated security=True");
+        }
+        public GBKingdomContext(DbContextOptions<GBKingdomContext> options)
+            : base(options)
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
         }
     }
 }

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<GBKingdom.Models.Product>
+
+@{
+    ViewData["Title"] = "GBK Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>GBK Products</h1>
+@foreach (var product in Model)
+{
+    <div>
+        <h4>@Html.DisplayFor(prod => product.Name)</h4>
+        <p>Manufactured in: @Html.DisplayFor(prod => product.OriginCountry)</p>
+        <p>@Html.DisplayFor(prod => product.Price)</p>
+        @foreach (var review in product.Reviews)
+        {
+            <div>
+                <p>@Html.DisplayFor(rev => review.Stars) of 5 stars review by @Html.DisplayFor(rev => review.Author)</p>
+            </div>
+        }
+
+    </div>
+}
