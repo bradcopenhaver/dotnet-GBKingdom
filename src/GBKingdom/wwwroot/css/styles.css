@@ -1,2 +1,12 @@
-﻿body {
+﻿.heading {
+    text-align:center;
+}
+.heading .head-search{
+    margin: 20px auto;
+}
+.navbar-nav{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
 }

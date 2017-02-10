@@ -9,7 +9,36 @@
 </head>
 <body>
     <div class="container">
-        @RenderBody()
+        <div class="row heading">
+            <div class="col-sm-3">
+                <div class="head-search">
+                    <input class="form-control" value="Search" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h2>Gummi Bear Kingdom</h2>
+            </div>
+            <div class="col-sm-3">
+                <div class="head-cart">
+                    <h5>Shopping Cart</h5>
+                    <p>1 item</p>
+                    <button class="btn btn-success">Checkout</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Product Category 1", "Index", "Products")</li>
+                        <li>@Html.ActionLink("Product Category 2", "Index", "Products")</li>
+                        <li>@Html.ActionLink("Product Category 3", "Index", "Products")</li>
+                    </ul>
+            </nav>
+        </div>
+        <div class="row body">
+            @RenderBody()
+        </div>
     </div>
 </body>
 </html>
