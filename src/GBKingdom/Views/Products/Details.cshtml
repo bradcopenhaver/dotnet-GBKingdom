@@ -1,0 +1,24 @@
+﻿@model GBKingdom.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@Model.Name Details</h1>
+
+<h4>Manufactured in: @Html.DisplayFor(prod => Model.OriginCountry)</h4>
+<h4>Price: $@Html.DisplayFor(prod => Model.Price)</h4>
+<h3>Product Reviews:</h3>
+@foreach (var review in Model.Reviews)
+{
+    <div>
+        <p>@Html.DisplayFor(rev => review.Stars) of 5 stars review by @Html.DisplayFor(rev => review.Author)</p>
+        <p>@review.Body</p>
+        <div class="adminOnly">
+            <p>@Html.ActionLink("Edit this Review", "Edit", "Reviews", new { id = Model.ProductId }) | @Html.ActionLink("Delete this Review", "Delete", "Reviews", new { id = Model.ProductId })</p>
+        </div>
+    </div>
+}
+<div class="adminOnly">
+    <p>@Html.ActionLink("Edit this Product", "Edit", new { id = Model.ProductId }) | @Html.ActionLink("Delete this Product", "Delete", new { id = Model.ProductId })</p>
+</div>

@@ -8,15 +8,7 @@
 @foreach (var product in Model)
 {
     <div>
-        <h4>@Html.DisplayFor(prod => product.Name)</h4>
-        <p>Manufactured in: @Html.DisplayFor(prod => product.OriginCountry)</p>
+        <h4>@Html.ActionLink(product.Name, "Details", new { id = product.ProductId })</h4>
         <p>Price: $@Html.DisplayFor(prod => product.Price)</p>
-        @foreach (var review in product.Reviews)
-        {
-            <div>
-                <p>@Html.DisplayFor(rev => review.Stars) of 5 stars review by @Html.DisplayFor(rev => review.Author)</p>
-            </div>
-        }
-
     </div>
 }
