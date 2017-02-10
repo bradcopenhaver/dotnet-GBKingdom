@@ -10,7 +10,7 @@
     <div>
         <h4>@Html.DisplayFor(prod => product.Name)</h4>
         <p>Manufactured in: @Html.DisplayFor(prod => product.OriginCountry)</p>
-        <p>@Html.DisplayFor(prod => product.Price)</p>
+        <p>Price: $@Html.DisplayFor(prod => product.Price)</p>
         @foreach (var review in product.Reviews)
         {
             <div>

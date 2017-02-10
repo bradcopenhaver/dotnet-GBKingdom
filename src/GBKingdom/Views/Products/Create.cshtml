@@ -1,0 +1,25 @@
+﻿@model GBKingdom.Models.Product
+
+@{
+    ViewData["Title"] = "Admin - Create Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Admin Create New Product</h1>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input class="form-control" asp-for="Name">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <input class="form-control" type="number" asp-for="Price">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="OriginCountry">Country of Origin</label>
+        <input class="form-control" asp-for="OriginCountry">
+    </div>
+    <input type="submit" value="Create" class="btn btn-info" />
+}
