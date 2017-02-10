@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7E103D15-C6C1-43FF-B040-C8D2328B089D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4E40884-1ABF-4CCC-84AA-481E05A59744}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GBKingdom", "src\GBKingdom\GBKingdom.xproj", "{FBF73DC7-1D68-49EC-84E2-D44F6EF0ABCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBF73DC7-1D68-49EC-84E2-D44F6EF0ABCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF73DC7-1D68-49EC-84E2-D44F6EF0ABCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF73DC7-1D68-49EC-84E2-D44F6EF0ABCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF73DC7-1D68-49EC-84E2-D44F6EF0ABCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FBF73DC7-1D68-49EC-84E2-D44F6EF0ABCA} = {7E103D15-C6C1-43FF-B040-C8D2328B089D}
+	EndGlobalSection
+EndGlobal
