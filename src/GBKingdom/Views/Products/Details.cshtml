@@ -4,31 +4,40 @@
     ViewData["Title"] = "Product Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>@Model.Name Details</h1>
+<div class="col-sm-4">
+    <div class="product-detail-image"><p>Product images</p></div>
+</div>
+<div class="col-sm-4">
+    <h3>@Model.Name</h3>
+    <h4>Manufactured in: @Html.DisplayFor(prod => Model.OriginCountry)</h4>
+    <h4>Price: $@Html.DisplayFor(prod => Model.Price)</h4>
 
-<h4>Manufactured in: @Html.DisplayFor(prod => Model.OriginCountry)</h4>
-<h4>Price: $@Html.DisplayFor(prod => Model.Price)</h4>
-<h3>Product Reviews:</h3>
-@if (Model.Reviews.Count == 0)
-{
-    <h5>
-        No reviews yet. Be the first to @Html.ActionLink("Write a review for this product", "Create", "Reviews", new { id = Model.ProductId })
-    </h5>
-}
-else
-{
-    <h5>@Html.ActionLink("Write a review for this product", "Create", "Reviews", new { id = Model.ProductId })</h5>
-    @foreach (var review in Model.Reviews)
+</div>
+<div class="col-sm-4">
+    <h3>Reviews:</h3>
+    @if (Model.Reviews.Count == 0)
     {
-        <div>
-            <p>@Html.DisplayFor(rev => review.Stars) of 5 stars review by @Html.DisplayFor(rev => review.Author)</p>
-            <p>@review.Body</p>
-            <div class="adminOnly">
-                <p>@Html.ActionLink("Edit this Review", "Edit", "Reviews", new { id = review.ReviewId }) | @Html.ActionLink("Delete this Review", "Delete", "Reviews", new { id = review.ReviewId })</p>
-            </div>
-        </div>
+        <p>No reviews yet.</p>
+        <p>Be the first to @Html.ActionLink("Write a review for this product", "Create", "Reviews", new { id = Model.ProductId })</p>
     }
-}
-<div class="adminOnly">
-    <p>@Html.ActionLink("Edit this Product", "Edit", new { id = Model.ProductId }) | @Html.ActionLink("Delete this Product", "Delete", new { id = Model.ProductId })</p>
+    else
+    {
+        <h5>@Html.ActionLink("Write a review for this product", "Create", "Reviews", new { id = Model.ProductId })</h5>
+        @foreach (var review in Model.Reviews)
+        {
+            <div class="review-tile">
+                <h5><strong>@Html.DisplayFor(rev => review.Stars) of 5 stars</strong></h5>
+                <p>@review.Body</p>
+                <p>--@Html.DisplayFor(rev => review.Author)</p>
+                <div class="adminOnly">
+                    <p>@Html.ActionLink("Edit this Review", "Edit", "Reviews", new { id = review.ReviewId }) | @Html.ActionLink("Delete this Review", "Delete", "Reviews", new { id = review.ReviewId })</p>
+                </div>
+            </div>
+        }
+    }
+</div>
+<div class="col-sm-12">
+    <div class="adminOnly">
+        <p>@Html.ActionLink("Edit this Product", "Edit", new { id = Model.ProductId }) | @Html.ActionLink("Delete this Product", "Delete", new { id = Model.ProductId })</p>
+    </div>
 </div>

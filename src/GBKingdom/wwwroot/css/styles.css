@@ -47,6 +47,16 @@
     border: 1px solid lightgray;
     text-align: center;
 }
+.product-detail-image {
+    height: 400px;
+    width: 100%;
+    border: 1px solid lightgray;
+    text-align:center;
+}
+.review-tile {
+    border: 1px solid lightgray;
+    padding: 10px;
+}
 .adminOnly{
     background-color: #ffb7b7;
     width:300px;
