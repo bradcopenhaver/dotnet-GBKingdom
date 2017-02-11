@@ -20,11 +20,12 @@ Clone this repository and open the solution file `GBKingdom.sln` in Visual Studi
 
 ## Known Bugs
 
-
+None, but only due to lack of testing.
 
 ## Possible future version features
 
-
+* Add better styling to input form views.
+* Admin authentication.
 
 ## Support and contact details
 
