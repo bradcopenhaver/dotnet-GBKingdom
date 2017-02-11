@@ -1,6 +1,8 @@
 ﻿# Gummi Bear Kingdom Site
 
-Gummi Bear Kingdom is a fictional entity and is not intended to mimic or represent any real world entity or intellectual property. This site is a simple mockup ecommerce site with user-generated product reviews. The styling of the site was inspired by the [Free Style Ecommerce Bootstrap Web Template](https://w3layouts.com/preview/?l=/free-style-a-flat-ecommerce-bootstrap-responsive-web-template/). 
+Gummi Bear Kingdom is a fictional entity and is not intended to mimic or represent any real world entity or intellectual property. This site is a simple mockup ecommerce site with user-generated product reviews. It's basically a functional set of wireframes, because there are no images. Admin functions are shaded pink and would only be visible to site admins. 
+
+The styling of the site was inspired by the [Free Style Ecommerce Bootstrap Web Template](https://w3layouts.com/preview/?l=/free-style-a-flat-ecommerce-bootstrap-responsive-web-template/). 
 
 
 ## Setup and Install

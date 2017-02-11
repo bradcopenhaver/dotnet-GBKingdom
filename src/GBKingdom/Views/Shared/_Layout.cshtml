@@ -8,12 +8,12 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row heading">
-            <div class="col-sm-3">
-                <div class="head-search">
+            <div class="col-sm-3 head-search">
+                
                     <input class="form-control" value="Search" />
-                </div>
+                
             </div>
             <div class="col-sm-6">
                 <h2>Gummi Bear Kingdom</h2>
@@ -36,6 +36,8 @@
                     </ul>
             </nav>
         </div>
+    </div>
+    <div class="container">
         <div class="row body">
             @RenderBody()
         </div>

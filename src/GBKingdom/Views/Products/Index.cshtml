@@ -4,11 +4,18 @@
     ViewData["Title"] = "GBK Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>GBK Products</h1>
-@foreach (var product in Model)
-{
-    <div>
-        <h4>@Html.ActionLink(product.Name, "Details", new { id = product.ProductId })</h4>
-        <p>Price: $@Html.DisplayFor(prod => product.Price)</p>
+<div class="col-sm-12">
+    <div class="product-box">
+        @foreach (var product in Model)
+        {
+            <div class="product-tile">
+                <div class="product-tile-image"><p>Product image</p></div>
+                <h4>@Html.ActionLink(product.Name, "Details", new { id = product.ProductId })</h4>
+                <p>$@Html.DisplayFor(prod => product.Price)</p>
+            </div>
+        }
     </div>
-}
+    <div class="adminOnly panel panel-default">
+        <p>@Html.ActionLink("Create new product", "Create")</p>
+    </div>    
+</div>
